@@ -239,7 +239,7 @@ In this step, we will complete the logic that will determine if there is a winne
 - We will need to be referencing each item of the array pretty often, so to make our typing a bit easier lets store each index of the array into its own variable.
   - This step is not needed for the function to run properly, but it will make it easier to read.
   - Lets name each square appropriately by naming each of the 9 variables based off its location in the grid. For instance `topRight`, `topCenter`, and `middleCenter`.
-- We next need to check if a winner has been determined. To do that we need to check every possible winning combination. For instance if `topLeft`, `topMiddle` and `topRight` all equal each other then we know we have a winner, almost. It is possible that all 3 squares have no value so they would all equal `undefiend`, which is not a winner. Because of that we need to first check that one of the squares does not equal `undefined`.
+- We next need to check if a winner has been determined. To do that we need to check every possible winning combination. For instance if `topLeft`, `topMiddle` and `topRight` all equal  would all equaeach other then we know we have a winner, almost. It is possible that all 3 squares have no value so theyl `undefiend`, which is not a winner. Because of that we need to first check that one of the squares does not equal `undefined`.
   - It will look something like this `if (topRight !== undefined && topRight === topCenter && topRight === topRight)`
   - In the case that all 3 are the same values then we will alert the winner. We can tell who won by looking at any of the 3 values, as what those variables hold is who played in those squares.
 - Finally we need to check if the board has been filled in yet. To do this we are going to write a for loop that loops exactly 9 times, and check each index of the array.
@@ -288,7 +288,7 @@ function play(clickedId) {
     alert(`${topLeft} is the winner`);
     return;
   }
-  if (middleLeft !== undefined && middleLeft === middleCenter && middleLeft === middleRight) {
+ // if (middleLeft !== undefined && middleLeft === middleCenter && middleLeft === middleRight) {
     alert(`${middleLeft} is the winner`);
     return;
   }
@@ -304,7 +304,7 @@ function play(clickedId) {
     alert(`${topCenter} is the winner`);
     return;
   }
-  if (topRight !== undefined && topRight === middleRight && topRight === bottomRight) {
+  //if (topRight !== undefined && topRight === middleRight && topRight === bottomRight) {
     alert(`${topRight} is the winner`);
     return;
   }
